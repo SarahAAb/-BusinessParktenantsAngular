@@ -1,0 +1,13 @@
+<form [formGroup]="form" class="example-form">
+
+    <mat-form-field class="example-full-width">
+      <mat-label>{{'language.RoleName'|translate}}</mat-label>
+      <input type="text" matInput formControlName="name">
+      <mat-error *ngIf="form.controls['name'].touched && form.hasError('required','name')">
+        {{'Company.thisfieldisrequired'|translate}}       </mat-error>
+     
+    </mat-form-field>
+    <button mat-button color="primary" (click)="SaveData()">{{'Company.Save'|translate}}</button>
+
+  </form>
+  

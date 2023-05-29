@@ -1,0 +1,41 @@
+<div class="grid-container">
+  <h1 class="mat-h1">{{'Dashboard.Dashboard'|translate}}</h1>
+  <mat-grid-list cols="3" rowHeight="350px">
+    <mat-grid-tile colspan=1 rowspan=1>
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{'Dashboard.NoofComplains'|translate}}
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          {{cno}}
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile colspan=1 rowspan=1>
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{'Dashboard.NoofSuggestions'|translate}} 
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          {{sno}}
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile colspan=1 rowspan=1>
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{'Dashboard.NoofDoneComplains'|translate}} 
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          {{dno}}
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

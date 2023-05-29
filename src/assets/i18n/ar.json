@@ -1,0 +1,57 @@
+{
+    "language":{
+        "Menu":"القائمة",
+        "Companies":"الشركات",
+        "Users":"المستخدمين",
+        "Sectors":"قطاعات",
+        "AddRole":"إضافة دور",
+        "ComplainHistory":"شكاوي المسندة",
+        "SuggestionList":"قائمة الاقتراحات",
+        "ComplainList":"قائمة الشكاوي",
+        "SectorName":"اسم القطاع",
+        "AddSector":"إضافة قطاع",
+        "Replay":"رد",
+        "RoleName":"اسم الدور",
+        "NewComplainorSuggestion":"شكوى او اقتراح جديد",
+        "SaveasComplain":"حفظ كشكوى",
+        "SaveasSuggestion":"حفظ كاقتراح",
+        "Assign":"تعيين"
+    },
+    "Company":{
+        "Name":"الاسم",
+        "ExportExcel":"استخراج ملف الإكسل",
+        "Phone":"رقم الهاتف",
+        "Delete":"حذف",
+        "Update":"تحديث",
+        "AddCompany":"إضافة شركة",
+        "Chooseanoption":"اختر خيار",
+"thisfieldisrequired":"هذا الحقل مطلوب",
+"Save":"حفظ",
+"Title":"العنوان"
+            },
+            "User":{
+                "Email":"البريد الالكتروني",
+                "AddUser":"إضافة مستخدم",
+                "FullName":"الاسم الكامل",
+                "Password":"كلمة السر",
+                "ConfirmPassward":"تأكيد كلمة السر",
+                "CreateAccount":"إنشاء حساب",
+                "Login":"تسجيل دخول"
+        
+            },
+            "Complain":{
+                "ComplainReplay":"رد على الشكوى",
+                "Details":"التفاصيل",
+                "Note":"ملاحظة",
+                "Done":"تم",
+                "In Progress":"قيد العمل",
+                "Opened":"فتحت"
+            },
+            "Dashboard":{
+                "Dashboard":"لوحة القيادة",
+                "NoofComplains":"إجمالي عدد الشكاوي",
+                "NoofSuggestions":"إجمالي عددالاقتراحات",
+                "NoofDoneComplains":"إجمالي عدد الشكاوي التي تمت"
+            }
+                
+}

@@ -1,0 +1,42 @@
+<mat-card>
+    <mat-card-content>
+        <div>
+            <h1>{{'Complain.ComplainReplay'|translate}}</h1>
+        <form [formGroup]="form" class="example-form">
+            <input  type="hidden" formControlName="id">
+            <mat-form-field class="example-full-width">
+              <mat-label>{{'Company.Name'|translate}}</mat-label>
+              <input type="text" matInput formControlName="name" readonly>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>{{'Company.Phone'|translate}}</mat-label>
+                <input type="text" matInput formControlName="phone" readonly>
+              </mat-form-field>
+        
+              <mat-form-field class="example-full-width">
+                <mat-label>{{'Company.Title'|translate}}</mat-label>
+                <input type="text" matInput formControlName="title" readonly>        
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>{{'Complain.Details'|translate}}</mat-label>
+                <textarea rows="4" cols="50" type="text" matInput formControlName="details" readonly></textarea>               
+              </mat-form-field>
+              <mat-form-field class="example-full-width">
+                <mat-label>{{'Complain.Note'|translate}}</mat-label>
+                <input type="text" matInput formControlName="note">        
+              </mat-form-field>
+              <mat-form-field style="margin-left: 20px;">
+                <mat-label>{{'Company.Chooseanoption'|translate}}</mat-label>
+                <mat-select formControlName="status">
+                  <mat-option value="Opened">{{'Complain.Opened'|translate}}</mat-option>
+                  <mat-option value="Inprogress">{{'Complain.In Progress'|translate}}</mat-option>
+                  <mat-option value="Done">{{'Complain.Done'|translate}}</mat-option>
+                </mat-select>        
+              </mat-form-field>
+          </form>
+              <button mat-button color="primary" (click)="Update()">{{'language.Replay'|translate}}</button>
+        
+            </div>
+    </mat-card-content>
+  </mat-card>
+  

@@ -1,0 +1,24 @@
+<div>
+<form [formGroup]="form" class="example-form">
+    <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input type="text" matInput formControlName="email">
+        <mat-error *ngIf="form.controls['email'].touched && form.hasError('required','email')">
+  this field is required
+        </mat-error>
+       
+      </mat-form-field>
+      
+      <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput formControlName="password">
+        <mat-error *ngIf="form.controls['password'].touched && form.hasError('required','password')">
+  this field is required
+        </mat-error>
+      </mat-form-field>
+  </form>
+      <button mat-button color="primary" (click)="onLogin()">Login</button>
+      <br/>
+      <h4>For New Complain and Suggestion <a routerLink="/NewComplain">Click here</a></h4>
+    </div>
+

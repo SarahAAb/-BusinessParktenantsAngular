@@ -1,0 +1,42 @@
+<div>
+<form [formGroup]="form" class="example-form">
+    <input  type="hidden" formControlName="id">
+    <mat-form-field class="example-full-width">
+      <mat-label>{{'User.FullName'|translate}}</mat-label>
+      <input type="text" matInput formControlName="FullName">
+      <mat-error *ngIf="form.controls['FullName'].touched && form.hasError('required','FullName')">
+            {{'Company.thisfieldisrequired'|translate}} 
+      </mat-error>
+     
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>{{'User.Email'|translate}}</mat-label>
+        <input type="text" matInput formControlName="Email">
+
+        <mat-error *ngIf="form.controls['Email'].touched && form.hasError('required','Email')">
+            {{'Company.thisfieldisrequired'|translate}} 
+        </mat-error>
+       
+      </mat-form-field>
+      
+      <mat-form-field class="example-full-width">
+        <mat-label>{{'User.Password'|translate}}</mat-label>
+        <input type="password" matInput formControlName="Password">
+
+        <mat-error *ngIf="form.controls['Password'].touched && form.hasError('required','Password')">
+            {{'Company.thisfieldisrequired'|translate}} 
+        </mat-error>
+       
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>{{'User.ConfirmPassward'|translate}}</mat-label>
+        <input type="password" matInput formControlName="ConfirmPassward">   
+        <mat-error *ngIf="form.controls['ConfirmPassward'].touched && form.hasError('required','ConfirmPassward')">
+            {{'Company.thisfieldisrequired'|translate}} 
+                  </mat-error>
+              
+      </mat-form-field>
+  </form>
+      <button mat-button color="primary" (click)="SignUp()">{{'User.CreateAccount'|translate}}</button>
+
+</div>

@@ -1,0 +1,33 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <mat-list role="list">
+        <mat-list-item role="listitem" *ngIf="role=='Admin'||role=='Employee'"><button mat-button routerLink="/home/Dashboard">{{'Dashboard.Dashboard'|translate}}</button></mat-list-item>
+        <mat-list-item role="listitem" *ngIf="role=='Admin'"><button mat-button routerLink="/home/CompanyList">{{'language.Companies'|translate}}</button></mat-list-item>
+        <mat-list-item role="listitem" *ngIf="role=='Admin'"><button mat-button routerLink="/home/UserList">{{'language.Users'|translate}}</button></mat-list-item>
+        <mat-list-item role="listitem" *ngIf="role=='Admin'"><button mat-button routerLink="/home/SectorList">{{'language.Sectors'|translate}}</button></mat-list-item>
+        <mat-list-item role="listitem" *ngIf="role=='Admin'"><button mat-button routerLink="/home/NewRole">{{'language.AddRole'|translate}}</button></mat-list-item>
+        <mat-list-item role="listitem" *ngIf="role=='Employee'"><button mat-button routerLink="/home/ComplainHistory">{{'language.ComplainHistory'|translate}}</button></mat-list-item>
+        <mat-list-item role="listitem" *ngIf="role=='Admin'"><button mat-button routerLink="/home/SuggestionList">{{'language.SuggestionList'|translate}}</button></mat-list-item>
+        <mat-list-item role="listitem" *ngIf="role=='Admin'"><button mat-button routerLink="/home/ComplainList">{{'language.ComplainList'|translate}}</button></mat-list-item>
+
+      </mat-list>
+    </mat-drawer>
+  <button type="button" mat-button (click)="drawer.toggle()">
+        <mat-icon color="primary">menu</mat-icon>
+        {{'language.Menu'|translate}}
+      </button> 
+      
+      <button style="float:right;"  (click)="onLanguageChange('en')" mat-button>English</button>
+      <button style="float:right;" (click)="onLanguageChange('ar')" mat-button>العربية</button>
+      
+    <div style="padding-left: 2%;" class="example-sidenav-content">
+
+
+      
+      <router-outlet></router-outlet>
+
+    </div>
+  
+  </mat-drawer-container>
+
+  

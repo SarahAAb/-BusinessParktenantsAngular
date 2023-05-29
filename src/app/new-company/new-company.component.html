@@ -1,0 +1,46 @@
+<div>
+<form [formGroup]="form" class="example-form">
+    <input  type="hidden" formControlName="id">
+    <mat-form-field class="example-full-width">
+      <mat-label> {{'Company.Name'|translate}}</mat-label>
+      <input type="text" matInput formControlName="name">
+      <mat-error *ngIf="form.controls['name'].touched && form.hasError('required','name')">
+        {{'Company.thisfieldisrequired'|translate}} 
+      </mat-error>
+     
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>{{'Company.Phone'|translate}}</mat-label>
+        <input type="text" matInput formControlName="phone">
+
+        <mat-error *ngIf="form.controls['phone'].touched && form.hasError('required','phone')">
+          {{'Company.thisfieldisrequired'|translate}} 
+        </mat-error>
+       
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>{{'Company.Chooseanoption'|translate}}</mat-label>
+        <mat-select formControlName="size">
+          <mat-option value="1-50">1-50</mat-option>
+          <mat-option value="50-100">50-100</mat-option>
+          <mat-option value="101-300">101-300</mat-option>
+          <mat-option value="301-500">301-500</mat-option>
+          <mat-option value="above 500"> above 500</mat-option>
+        </mat-select>
+                <mat-error *ngIf="form.controls['size'].touched && form.hasError('required','size')">
+                  {{'Company.thisfieldisrequired'|translate}} 
+        </mat-error>
+
+      </mat-form-field>
+      
+      <mat-form-field style="margin-left: 20px;">
+        <mat-label>{{'Company.Chooseanoption'|translate}}</mat-label>
+        <mat-select formControlName="sectorId">
+          <mat-option *ngFor="let item of lisector" [value]="item.id">{{item.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+  </form>
+      <button mat-button color="primary" (click)="SaveData()" *ngIf="bag==true" >{{'Company.Save'|translate}}</button>
+    <button mat-button color="primary" (click)="Update()" *ngIf="bag==false" >{{'Company.Update'|translate}}</button>
+  </div>

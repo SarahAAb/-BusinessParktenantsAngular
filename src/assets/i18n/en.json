@@ -1,0 +1,56 @@
+{
+    "language":{
+        "Menu":"Menu",
+        "Companies":"Companies",
+        "Users":"Users",
+        "Sectors":"Sectors",
+        "AddRole":"Add Role",
+        "ComplainHistory":"Complain History",
+        "SuggestionList":"Suggestion List",
+        "ComplainList":"Complain List",
+        "SectorName":"Sector Name",
+        "AddSector":"Add Sector",
+        "Replay":"Replay",
+        "RoleName":"Role Name",
+        "NewComplainorSuggestion":"New Complain or Suggestion",
+        "SaveasComplain":"Save as Complain",
+        "SaveasSuggestion":"Save as Suggestion",
+        "Assign":"Assign"
+    },
+    "Company":{
+"Name":"Name",
+"ExportExcel":"Export Excel",
+"Phone":"Phone",
+"Delete":"Delete",
+"Update":"Update",
+"AddCompany":"Add Company",
+"Chooseanoption":"Choose an option",
+"thisfieldisrequired":"this field is required",
+"Save":"Save",
+"Title":"Title"
+    },
+    "User":{
+        "Email":"Email",
+        "AddUser":"Add User",
+        "FullName":"Full Name",
+        "Password":"Password",
+        "ConfirmPassward":"Confirm Passward",
+        "CreateAccount":"Create Account",
+        "Login":"Login"
+    },
+    "Complain":{
+        "ComplainReplay":"Complain Replay",
+        "Details":"Details",
+        "Note":"Note",
+        "Done":"Done",
+        "In Progress":"In Progress",
+        "Opened":"Opened"
+    },
+    "Dashboard":{
+        "Dashboard":"Dashboard",
+        "NoofComplains":"No .of Complains",
+        "NoofSuggestions":"No. of Suggestions",
+        "NoofDoneComplains":"No. of Done Complains"
+    }
+    
+}

@@ -1,0 +1,57 @@
+<div>
+  <button  (click)="onLanguageChange('en')" mat-button>English</button>
+  <button  (click)="onLanguageChange('ar')" mat-button>العربية</button>
+
+    <h1>{{'language.NewComplainorSuggestion'|translate}}</h1>
+<form [formGroup]="form" class="example-form">
+    <input  type="hidden" formControlName="id">
+    <mat-form-field class="example-full-width">
+      <mat-label>{{'Company.Name'|translate}}</mat-label>
+      <input type="text" matInput formControlName="name" [readonly]="!bag">
+      <mat-error *ngIf="form.controls['name'].touched && form.hasError('required','name')">
+        {{'Company.thisfieldisrequired'|translate}} 
+      </mat-error>
+     
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>{{'Company.Phone'|translate}}</mat-label>
+        <input type="text" matInput formControlName="phone" [readonly]="!bag">
+
+        <mat-error *ngIf="form.controls['phone'].touched && form.hasError('required','phone')">
+          {{'Company.thisfieldisrequired'|translate}} 
+        </mat-error>
+       
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>{{'Company.Title'|translate}}</mat-label>
+        <input type="text" matInput formControlName="title" [readonly]="!bag">
+
+        <mat-error *ngIf="form.controls['title'].touched && form.hasError('required','title')">
+          {{'Company.thisfieldisrequired'|translate}} 
+        </mat-error>
+       
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>{{'Complain.Details'|translate}}</mat-label>
+        <textarea rows="4" cols="50" type="text" matInput formControlName="details" [readonly]="!bag"></textarea>
+
+        <mat-error *ngIf="form.controls['details'].touched && form.hasError('required','details')">
+          {{'Company.thisfieldisrequired'|translate}} 
+        </mat-error>
+       
+      </mat-form-field>
+
+      <mat-form-field style="margin-left: 20px;" *ngIf="bag==false">
+        <mat-label>{{'Company.Chooseanoption'|translate}}</mat-label>
+        <mat-select formControlName="userId" >
+          <mat-option *ngFor="let item of liEmployees" [value]="item.userId">{{item.fullName}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+  </form>
+      <button mat-button color="primary" (click)="SaveData()" *ngIf="bag==true">{{'language.SaveasComplain'|translate}}</button>
+      <button mat-button color="primary" (click)="Save()" *ngIf="bag==true">{{'language.SaveasSuggestion'|translate}}</button>
+      <button mat-button color="primary" (click)="Update()" *ngIf="bag==false">{{'language.Assign'|translate}}</button>
+
+    </div>
